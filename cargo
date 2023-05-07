@@ -1,0 +1,68 @@
+package cargo1;
+
+import java.util.*;
+
+public class cargo {
+      int codCargo, matricula, escolha;
+      String i , nome, dCargo;
+      Scanner sc = new Scanner(System.in);
+      public Object codigo() {
+          for (codCargo = 0; codCargo <= 5; ++codCargo);
+           System.out.println("O código do cargo desse funcionário é: " + codCargo);
+          return null;
+      }
+      public void atribuicaoCargo(){
+         System.out.println("Digite o nome do funcionário:  ");
+         nome = sc.nextLine();
+         System.out.println("Digite o cargo do funcionário:  ");
+         i = sc.nextLine();
+         System.out.println("Cargo atribuído a funcionário com sucesso!!!");
+         System.out.printf("SEU CODIGO DE FUNCIONARIO É" ,  this.codigo());
+      }
+      public void descriCargos(){
+          System.out.println("Responda com SIM ou NÃO, deseja visualizar as informações sobre os cargos da nossa padaria?:  ");
+          dCargo = sc.nextLine();
+          if (dCargo == "SIM") {
+              System.out.println("Selecione o cargo: \n" +
+                                 "1 - GERENTE\n" +
+                                 "2 - CAIXA\n" +
+                                 "3 - SERVIÇOS GERAIS\n" +
+                                 "4 - PADEIRO\n" +
+                                 "5 - ESTOQUISTA");
+              switch (escolha) {
+                  case 1:
+                      System.out.println("GERENTE\n " +
+                              "- Salário: R$2.000,00\n" +
+                              "- Atribuições: Garantir que tudo ocorra bem durante o expediente,\n" +
+                              "garantir a satisfação dos clientes.");
+                      break;
+                  case 2:
+                      System.out.println("CAIXA\n" +
+                              "- Salário: R$ 1.200,00\n" +
+                              "- Atribuições: Atender os clientes em suas compras,\n" +
+                              "responsavel pelo fechamento do caixa e contagem das vendas.");
+                      break;
+                  case 3:
+                      System.out.println("SERVIÇOS GERAIS\n" +
+                              "- Salário: R$ 1.200,00\n" +
+                              "- Atribuições: Manter o estabelecimento limpo.");
+                      break;
+                  case 4:
+                      System.out.println("PADEIRO\n" +
+                              "- Salário: R$ 1.500,00\n" +
+                              "- Atribuições: Cozinhar nossos pães conforme nossa demanda.");
+                      break;
+                  case 5:
+                      System.out.println("ESTOQUISTA\n" +
+                              "- Salário: 1.500,00\n" +
+                              "- Atribuições: Cuidar do nosso estoque\n" +
+                              "verificar sempre as validades dos produtos e quanto falta para chegar ao estoque minimo.");
+                      break;
+              }
+              } else {
+              System.out.println("Ok! Pressione 0 para voltar a página inicial.");
+
+          }
+          }
+
+      }
